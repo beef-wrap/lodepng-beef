@@ -5,8 +5,7 @@ Name = "lodepng-beef"
 DefaultNamespace = "lodepng"
 
 [Configs.Debug.Win64]
-CLibType = "DynamicDebug"
-LibPaths = ["$(ProjectDir)\\libs\\debug\\lodepng.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\x64\\lodepng_d.lib"]
 
 [Configs.Release.Win64]
-LibPaths = ["$(ProjectDir)\\libs\\release\\lodepng.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\x64\\lodepng.lib"]

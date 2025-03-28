@@ -109,7 +109,7 @@ in a comment in the lodepng.c(pp) file in the 'else' case of the searchable LODE
 
 #if LODEPNG_COMPILE_PNG
 	/*The PNG color types (also used for raw image).*/
-	public enum LodePNGColorType
+	public enum LodePNGColorType : c_int
 	{
 		LCT_GREY = 0, /*grayscale: 1,2,4,8,16 bit*/
 		LCT_RGB = 2, /*RGB: 8,16 bit*/
@@ -122,7 +122,7 @@ in a comment in the lodepng.c(pp) file in the 'else' case of the searchable LODE
 		the valid color type names above, or numeric values like 1 or 7 when checking for
 		particular disallowed color type byte values, or cast to integer to print it.*/
 		LCT_MAX_OCTET_VALUE = 255
-	};
+	}
 
 #if LODEPNG_COMPILE_DECODER
 	/*
@@ -764,7 +764,8 @@ in a comment in the lodepng.c(pp) file in the 'else' case of the searchable LODE
 #if LODEPNG_COMPILE_ENCODER
 	/*strategy to use to choose the PNG filter per scanline. Strategies 0-4 correspond
 	to each of the 5 filter types PNG supports, the next values are adaptive strategies*/
-	public enum LodePNGFilterStrategy {
+	public enum LodePNGFilterStrategy  : c_int
+	{
 	  /*every filter at zero*/
 	  LFS_ZERO = 0,
 	  /*every filter at 1, 2, 3 or 4 (paeth), unlike LFS_ZERO not a good choice, but for testing*/
